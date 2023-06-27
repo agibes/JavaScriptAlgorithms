@@ -15,22 +15,17 @@ const fizzBuzz = () => {
     input.addEventListener("input", () => {
         p.textContent = '';
         for (let i = 1; i <= input.value; i++) {
-            p.textContent += i + ' ';
-        }
-
-        if (input.value % 2 === 0) {
-            p.textContent = 'FIZZ';
-        }
-        
-        if (input.value % 3 === 0) {
-            p.textContent = 'BUZZ';
-        }
-
-        if ((input.value % 2 === 0) && (input.value % 3 === 0)) {
-            p.textContent = 'FIZZ BUZZ';
+            if (i % 6 === 0) {
+                p.textContent += 'FIZZ BUZZ ';
+            } else if (i % 3 === 0) {
+                p.textContent += 'buzz ';
+            } else if (i % 2 === 0) {
+                p.textContent += 'fizz ';
+            } else {
+                p.textContent += i + ' ';
+            }
         }
     })
-
 }
 
 fizzBuzz();
