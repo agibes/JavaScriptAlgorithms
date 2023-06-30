@@ -10,14 +10,13 @@ const vowels = () => {
     const p = document.querySelector('#p');
 
     input.addEventListener("input", () => {
-        var string = [...input.value];
+
         var count = 0;
-        string.forEach(letter => {
-            if (letter == 'a' || letter == 'o' || letter == 'e' || letter == 'i' || letter == 'u') {
-                count++;
-            }
-        }) 
-        p.textContent = "there are " + count + " vowels"
+        const re = /[aeiou]/gi;
+        var vowelArr = input.value.match(re);
+        count = vowelArr.length;
+
+        p.textContent = "there are " + count + " vowels";
     });
 }
 
