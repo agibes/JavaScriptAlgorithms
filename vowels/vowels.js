@@ -14,10 +14,11 @@ const vowels = () => {
         var count = 0;
         const re = /[aeiou]/gi;
         var vowelArr = input.value.match(re);
-        count = vowelArr.length;
+        vowelArr ? count = vowelArr.length : count = 0
 
         p.textContent = "there are " + count + " vowels";
     });
 }
 
 vowels();
+
