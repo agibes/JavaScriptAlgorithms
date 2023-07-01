@@ -14,8 +14,13 @@ const reverseWords = () => {
         var newArr = []
         arr.forEach(item => {
             var stringArr = [...item]
-            stringArr.reverse();
-            newArr.push(stringArr.join(''));
+            var tempArr = [];
+            
+            stringArr.forEach(item => {
+                tempArr.unshift(item);
+            })
+
+            newArr.push(tempArr.join(''));
         })
         p.textContent = newArr.join(' ');
     })
