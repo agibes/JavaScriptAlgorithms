@@ -14,7 +14,7 @@ const caesarCipher = () => {
     const input = document.querySelectorAll('input');
     const p = document.querySelector('p');
 
-    const alphabetArr = 'abcdefghijklmkopqrstuvwxyz'.split('');
+    const alphabetArr = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
     input.forEach(input => {
         input.addEventListener("input", () => {
@@ -24,13 +24,12 @@ const caesarCipher = () => {
                 const findLetter = (e) => e == stringArr[i];
                 var sum = num + alphabetArr.findIndex(findLetter);
                 if (stringArr[i] === ' ') {continue};
-                while (sum >= alphabetArr.length) {sum -= 26};
+                while (sum >= 26) {sum -= 26};
                 stringArr[i] = alphabetArr[sum];
             };
             p.textContent = stringArr.join('');
         });
     })
 }
-
 
 caesarCipher();
