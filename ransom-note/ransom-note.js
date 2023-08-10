@@ -12,7 +12,6 @@ const ransomNote = () => {
 
         input.addEventListener("input", () => {
             
-            //create a count of every magazine word
             var magInput = 'Big Big Summer Blowout! Don\'t miss this years biggest sale yet. Come on down to the store to collect this once in a lifetime offer. We will never be having this sale ever again, so enjoy it while you can! Be the first one down and get and extra bonus cash offer. Hurry, the offer ends tomorrow!'
 
             var magMap = new Map();
@@ -26,7 +25,6 @@ const ransomNote = () => {
                 }
             })
 
-            //create a count of every magazine word
             var ransInput = input.value.trim();
             var ransMap = new Map()
             var ransInputArr = [...ransInput.toLowerCase().split(' ')]

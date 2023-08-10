@@ -15,6 +15,7 @@ const fizzBuzz = () => {
     input.addEventListener("input", () => {
         p.textContent = '';
         for (let i = 1; i <= input.value; i++) {
+            //using least common multiple
             if (i % 6 === 0) {
                 p.textContent += 'FIZZ BUZZ ';
             } else if (i % 3 === 0) {

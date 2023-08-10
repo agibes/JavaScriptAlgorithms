@@ -1,7 +1,6 @@
 //Implement a performant recursive function for the fibonacci series.
 
 const memoFib = () => {
-    //create the page content
     const root = document.querySelector('#root');
     root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Memoized Fibonacci Number'));
     root.appendChild(Object.assign(document.createElement('input'), {id: 'input', type: 'number'}))

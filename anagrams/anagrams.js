@@ -39,4 +39,4 @@ const anagrams = () => {
 
 anagrams();
     
-//does not check for capital vs lowercase vs number
+//includes spaces and numbers as characters

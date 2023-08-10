@@ -1,7 +1,6 @@
 //Implement a function that returns the fibonacci number at a given index.
 
 const fibNum = () => {
-    //create the page content
     const root = document.querySelector('#root');
     root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Fibonacci Number'));
     root.appendChild(Object.assign(document.createElement('input'), {id: 'input', type: 'number'}))
@@ -11,7 +10,6 @@ const fibNum = () => {
     const p = document.querySelector('p');
 
     input.addEventListener("input", () => {
-        //find the fibonacci number at index (input)
         let target = input.value;
         let fibonacci = [0, 1, 1]
 

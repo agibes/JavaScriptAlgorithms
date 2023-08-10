@@ -11,15 +11,12 @@ const reverseWords = () => {
 
     input.addEventListener("input", () => {
         var arr = [...input.value.split(" ")];
-        var newArr = []
+        var newArr = [];
         arr.forEach(item => {
-            var stringArr = [...item]
+            var stringArr = [...item];
             var tempArr = [];
             
-            stringArr.forEach(item => {
-                tempArr.unshift(item);
-            })
-
+            stringArr.forEach(item => {tempArr.unshift(item)});
             newArr.push(tempArr.join(''));
         })
         p.textContent = newArr.join(' ');

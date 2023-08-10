@@ -19,8 +19,6 @@ const mostCommonChar = () => {
             (Object.keys(charObj).includes(char)) ? charObj[char] += 1 : charObj[char] = 1;
         })
 
-        console.log(' new charObj', charObj);
-
         const charCountArr = Object.values(charObj)
 
         const charCount = charCountArr.find(count => count === Math.max(...charCountArr));
@@ -31,4 +29,6 @@ const mostCommonChar = () => {
 }
 
 mostCommonChar();
+
+//does not check for capital vs lowercase vs number
 
