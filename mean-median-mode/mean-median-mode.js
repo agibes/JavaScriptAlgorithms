@@ -1,16 +1,15 @@
 //Given an array of numbers, calculate the mean, median, and mode.
+import { makeQuadInput } from "../utils.mjs";
 
 const meanMedMod = () => {
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Mean Median Mode'));
-    root.appendChild(Object.assign(document.createElement('input'), {class: 'input', id: '1', type: 'number'}));
-    root.appendChild(Object.assign(document.createElement('input'), {class: 'input', id: '2', type: 'number'}));
-    root.appendChild(Object.assign(document.createElement('input'), {class: 'input', id: '3', type: 'number'}));
-    root.appendChild(Object.assign(document.createElement('input'), {class: 'input', id: '4', type: 'number'}));
-    root.appendChild(Object.assign(document.createElement('p'), {id: 'p'}))
+    makeQuadInput();
+    Object.assign(document.getElementById('1'), {type: 'number'});
+    Object.assign(document.getElementById('2'), {type: 'number'});
+    Object.assign(document.getElementById('3'), {type: 'number'});
+    Object.assign(document.getElementById('4'), {type: 'number'});
+    document.getElementById('title').appendChild(document.createTextNode('Mean Median Mode'));
     
     const input = document.querySelectorAll('input');
-    const p = document.querySelector('p');
 
     const numArr = [];
     

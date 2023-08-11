@@ -1,14 +1,11 @@
 //A palindrome is a word or phrase that reads the same backward as forward. 
 //Write a function that checks for this.
-
+import { makeSingleInput } from "../utils.mjs";
 const palindrome = () => {
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Palindrome'))
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input'}))
-    root.appendChild(Object.assign(document.createElement('p'), {id: 'p'}));
 
-    const  p = document.querySelector('#p')
-    const input = document.querySelector('#input');
+    makeSingleInput();
+    Object.assign(document.getElementById('input'), {type: 'text'});
+    document.getElementById('title').appendChild(document.createTextNode('Palindrome'));
     
     input.addEventListener("input", () => {
         p.textContent = input.value;

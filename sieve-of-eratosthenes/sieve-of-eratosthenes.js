@@ -1,13 +1,11 @@
 //For a given number, find all the prime numbers from zero to that number.
+import { makeSingleInput } from "../utils.mjs";
 
 const sieve = () => {
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Sieve of Eratosthenes'))
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input', type: 'number'}))
-    root.appendChild(Object.assign(document.createElement('p'), {id: 'p'}));
 
-    const  p = document.querySelector('#p')
-    const input = document.querySelector('#input');
+    makeSingleInput();
+    Object.assign(document.getElementById('input'), {type: 'number'});
+    document.getElementById('title').appendChild(document.createTextNode('Sieve of Eratosthenes'));
 
     input.addEventListener("input", () => {
         let num = parseInt(input.value);

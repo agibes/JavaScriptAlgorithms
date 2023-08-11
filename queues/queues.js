@@ -1,14 +1,15 @@
 //Create a checklist list using JS Classes.
+import { makeSingleInput } from "../utils.mjs";
 
 const queues = () => {
 
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Queues'));
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input', type: 'text'}))
+    makeSingleInput();
+    Object.assign(document.getElementById('input'));
+    document.getElementById('title').appendChild(document.createTextNode('Queues'));
+
     root.appendChild(Object.assign(document.createElement('ol'), {id: 'ol'}))
     root.appendChild(Object.assign(document.createElement('button'), {id: 'button', name: 'Add'})).innerHTML = 'Add to List';
 
-    const input = document.querySelector('#input');
     const ol = document.querySelector('ol');
     const button = document.querySelector('#button');
 

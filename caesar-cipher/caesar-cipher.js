@@ -1,18 +1,14 @@
 // Given a phrase, substitute each character by shifting it up or down the alphabet by a given integer. 
 // If necessary, the shifting should wrap around back to the beginning or end of the alphabet.
+import { makeDoubleInput } from "../utils.mjs";
 
 const caesarCipher = () => {
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Caesar Cipher'));
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input1', type: 'text'}));
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input2', type: 'number'}));
-
-    root.appendChild(Object.assign(document.createElement('p'), {id: 'p'}))
-
-    const input1 = document.querySelector('#input1');
-    const input2 = document.querySelector('#input2');
+    makeDoubleInput();
+    Object.assign(document.getElementById('input1'), {type: 'text'});
+    Object.assign(document.getElementById('input2'), {type: 'number'});
+    document.getElementById('title').appendChild(document.createTextNode('Caesar Cipher'));
+    
     const input = document.querySelectorAll('input');
-    const p = document.querySelector('p');
 
     const alphabetArr = 'abcdefghijklmnopqrstuvwxyz'.split('');
 

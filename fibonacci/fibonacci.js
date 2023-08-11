@@ -1,13 +1,11 @@
 //Implement a function that returns the fibonacci number at a given index.
+import { makeSingleNumInput } from "../utils.mjs";
 
 const fibNum = () => {
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Fibonacci Number'));
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input', type: 'number'}))
-    root.appendChild(Object.assign(document.createElement('p'), {id: 'p'}))
 
-    const input = document.querySelector('#input');
-    const p = document.querySelector('p');
+    makeSingleNumInput();
+    Object.assign(document.getElementById('input'), {type: 'number'});
+    document.getElementById('title').appendChild(document.createTextNode('Fibonacci Number'));
 
     input.addEventListener("input", () => {
         let target = input.value;

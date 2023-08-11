@@ -1,19 +1,16 @@
 // Given a magazine of words and a ransom note, determine if it’s possible to “cut out” and create the ransom note from the magazine words.
+import { makeSingleInput } from "../utils.mjs";
 
 const ransomNote = () => {
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Ransom Note'));
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input', type: 'text'}));
 
-    root.appendChild(Object.assign(document.createElement('p'), {id: 'p'}))
-
-    const input = document.querySelector('input');
-    const p = document.querySelector('p');
+    makeSingleInput();
+    Object.assign(document.getElementById('input'), {type: 'text'});
+    document.getElementById('title').appendChild(document.createTextNode('Ransome Note'));
 
         input.addEventListener("input", () => {
             
             var magInput = 'Big Big Summer Blowout! Don\'t miss this years biggest sale yet. Come on down to the store to collect this once in a lifetime offer. We will never be having this sale ever again, so enjoy it while you can! Be the first one down and get and extra bonus cash offer. Hurry, the offer ends tomorrow!'
-
+            var count;
             var magMap = new Map();
             var magInputArr = [...magInput.toLowerCase().split(' ')]
             magInputArr.forEach(word => {

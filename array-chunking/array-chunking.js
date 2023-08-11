@@ -1,17 +1,14 @@
 // Given an array and a size, split the array items into a list of arrays of the given size.
+import { makeDoubleInput } from "../utils.mjs";
 
 const arrChunking = () => {
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Array Chunking'));
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input1', class: "input", type: 'text', }))
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input2', class: "input", type: 'number', }))
-    root.appendChild(Object.assign(document.createElement('p'), {id: 'p'}));
 
-    const input1 = document.querySelector('#input1');
-    const input2 = document.querySelector('#input2');
+    makeDoubleInput();
+    Object.assign(document.getElementById('input1'), {type: 'text'});
+    Object.assign(document.getElementById('input2'), {type: 'number'});
+    document.getElementById('title').appendChild(document.createTextNode('Array Chunking'));
+    
     const input = document.querySelectorAll('input');
-    const p = document.querySelector('#p');
-
     input.forEach(input => {
         input.addEventListener("input", () => {
             p.textContent = '';

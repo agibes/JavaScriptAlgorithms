@@ -1,18 +1,12 @@
 //Given a string of characters as input, write a function that returns it with the characters reversed.
+import { makeSingleInput } from "../utils.mjs";
 
 const App = () => {
-    var root = document.getElementById('root');
-    var title = document.createElement('h1');
-    title.appendChild(document.createTextNode('String Reversal'));
-    root.appendChild(title);
+    makeSingleInput();
+    Object.assign(document.getElementById('input'), {type: 'text'});
+    document.getElementById('title').appendChild(document.createTextNode('String Reversal'));
 
-    var input = document.createElement('input');
-    input.setAttribute("type", "text");
-    input.setAttribute("id", "input");
-    root.appendChild(input);
-
-    var inputElem = document.querySelector('#input');
-    inputElem.addEventListener("input", () => {
+    input.addEventListener("input", () => {
         var inputValue = document.querySelector('#input').value;
 
         var characterArray = [...inputValue];
@@ -22,7 +16,7 @@ const App = () => {
         const p = document.createElement('p');
 
         for (const e of reversedCharacterArray) {
-            reversedString = '' + e;
+            const reversedString = '' + e;
         
             var pElem = document.querySelector('p');
 

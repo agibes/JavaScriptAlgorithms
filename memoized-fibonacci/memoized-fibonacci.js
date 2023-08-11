@@ -1,13 +1,11 @@
 //Implement a performant recursive function for the fibonacci series.
+import { makeSingleInput } from "../utils.mjs";
 
 const memoFib = () => {
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Memoized Fibonacci Number'));
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input', type: 'number'}))
-    root.appendChild(Object.assign(document.createElement('p'), {id: 'p'}))
 
-    const input = document.querySelector('#input');
-    const p = document.querySelector('p');
+    makeSingleInput();
+    Object.assign(document.getElementById('input'), {type: 'number'});
+    document.getElementById('title').appendChild(document.createTextNode('Memoized Fibonacci Number'));
 
     input.addEventListener("input", () => {
         

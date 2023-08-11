@@ -1,13 +1,9 @@
 //Given an array of items, reverse the order (without using the reverse method).
-
+import { makeSingleInput } from "../utils.mjs";
 const reverseArray = () => {
-    const root = document.querySelector('#root');
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'})).appendChild(document.createTextNode('Array Reversal'));
-    root.appendChild(Object.assign(document.createElement('input'), {id: 'input', type: 'text'}));
-    root.appendChild(Object.assign(document.createElement('p'), {id: 'p'}))
 
-    const input = document.querySelector('#input');
-    const p = document.querySelector('p');
+    makeSingleInput();
+    document.getElementById('title').appendChild(document.createTextNode('Array Reversal'));
 
     input.addEventListener("input", () => {
         var arr = [...input.value];
