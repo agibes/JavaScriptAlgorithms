@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Algorithms</title>
+</head>
+<body>
+    <div id="root"></div>
+    <input multiple type="file" id="file-input" name="file-input" />
+
+    <div id="buttonGroup">
+        <button id="vowels">Vowels</button>
+        <button id="twoSum">Two Sum</button>
+        <button id="stringReversal">String Reversal</button>
+        <button id="anagrams">Anagrams</button>
+        <button id="arrayChunking">Array Chunking</button>
+        <button id="caesarCipher">Caesar Cipher</button>
+        <button id="fibonacciNumber">Fibonacci Number</button>
+        <button id="capitalization">Capitalization</button>
+        <button id="fizzBuzz">Fizz Buzz</button>
+        <button id="integerReversal">Integer Reversal</button>
+
+        <button id="meanMedianMode">Mean Median Mode</button>
+        <button id="mostCommonCharacter">Most Common Character</button>
+        <button id="memoizedFibonacci">Memoized Fibonacci</button>
+        <button id="palindromeChecker">Palindrome Checker</button>
+        <button id="queues">Queues</button>
+        <button id="ransomNote">Ransom Note</button>
+        <button id="reverseArray">Reverse Array</button>
+        <button id="reverseWords">Reverse Words</button>
+        <button id="sieveOfEratosthenes">sieveOfEratosthenes</button>
+    </div>
+    
+    <script type="module">
+        import {testAlgorithm} from "../sandbox.js";
+
+        document.getElementById("buttonGroup").onclick = function (e) {
+            testAlgorithm(e.target.id);
+        }
+    </script>
+</body>
+</html>
