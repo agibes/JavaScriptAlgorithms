@@ -19,8 +19,9 @@ export function makeSingleInput () {
 }
 
 export function makeDoubleInput () {
-    removeChildren();
-
+    if (root.hasChildNodes()) {
+        removeChildren();
+    }
     root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'}));
     root.appendChild(Object.assign(document.createElement('input'), {id: 'input1'}));
     root.appendChild(Object.assign(document.createElement('input'), {id: 'input2'}));
@@ -32,8 +33,9 @@ export function makeDoubleInput () {
 }
 
 export function makeQuadInput () {
-    removeChildren();
-
+    if (root.hasChildNodes()) {
+        removeChildren();
+    }
     root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'}));
     root.appendChild(Object.assign(document.createElement('input'), {class: 'input', id: '1'}));
     root.appendChild(Object.assign(document.createElement('input'), {class: 'input', id: '2'}));
@@ -43,9 +45,3 @@ export function makeQuadInput () {
 
     const p = document.querySelector('p');
 }
-
-export function makeMenu () {
-    root.appendChild(Object.assign(document.createElement('h1'), {id: 'title'}));
-    root.appendChild(Object.assign(document.createElement('button'), {class: 'button'}));
-}
-
